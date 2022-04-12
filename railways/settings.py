@@ -26,7 +26,7 @@ SECRET_KEY = 'e+fregss8u8t%q8s55nb#=%bzmo9ytf4$i&%#a$t1y&ro%z8fp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,14 +82,10 @@ WSGI_APPLICATION = 'railways.wsgi.application'
 
 
 DATABASES = {
-    'default' :{
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'ce015' , # Name of the database*
-        'USER': 'root', #user name for the database
-        'PASSWORD' : '', # password
-        'HOST' : 'localhost', # IP address of the database
-        'PORT' : '3306', # port number of database server
-}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
 }
 
 

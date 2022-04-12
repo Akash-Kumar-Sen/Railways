@@ -45,6 +45,9 @@ class Tickets(models.Model):
     Ticketno = models.AutoField(primary_key=True)
     arrivaltime=models.CharField(max_length=50)
     departuretime=models.CharField(max_length=50)
+
+    def __str__(self):
+        return str(self.Ticketno)
     
 class Payment(models.Model):
     Amount=models.IntegerField()
